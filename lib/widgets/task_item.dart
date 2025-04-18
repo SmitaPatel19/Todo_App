@@ -57,9 +57,8 @@ class TaskItem extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          subtitle: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          subtitle: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               if (item.category.isNotEmpty)
                 Chip(

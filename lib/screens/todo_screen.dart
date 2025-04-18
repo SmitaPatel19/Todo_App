@@ -54,12 +54,16 @@ class _TodoScreenState extends State<TodoScreen> {
     });
   }
 
-  void _addTodoItem(String task) {
+  void _addTodoItem(String task, String category, String priority, DateTime? dueDate) {
     if (task.isNotEmpty) {
       setState(() {
         _todoItems.add(TodoItem(
           id: DateTime.now().millisecondsSinceEpoch.toString(),
           title: task,
+          isCompleted: false,
+          category: category,
+          priority: priority,
+          dueDate: dueDate,
         ));
         _filteredItems = List.from(_todoItems);
       });
@@ -113,7 +117,8 @@ class _TodoScreenState extends State<TodoScreen> {
     await showDialog(
       context: context,
       builder: (context) => AddTaskDialog(
-        onAdd: (task) => _addTodoItem(task),
+        onAdd: (task, category, priority, dueDate) =>
+            _addTodoItem(task, category, priority, dueDate),
       ),
     );
   }

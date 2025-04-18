@@ -3,7 +3,7 @@ import 'package:intl/intl.dart';
 import '../utils/constants.dart';
 
 class AddTaskDialog extends StatefulWidget {
-  final Function(String) onAdd;
+  final Function(String, String, String, DateTime?) onAdd;
 
   const AddTaskDialog({
     super.key,
@@ -132,7 +132,12 @@ class _AddTaskDialogState extends State<AddTaskDialog> {
           child: const Text('ADD'),
           onPressed: () {
             Navigator.of(context).pop();
-            widget.onAdd(_textFieldController.text);
+            widget.onAdd(
+              _textFieldController.text,
+              _selectedCategory,
+              _selectedPriority,
+              _selectedDate,
+            );
           },
         ),
       ],
