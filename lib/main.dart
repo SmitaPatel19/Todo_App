@@ -16,12 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: WillPopScope(
-        onWillPop: () async {
-          return true;
-        },
-        child: const TodoScreen(),
-      ),
+      home: const TodoScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
