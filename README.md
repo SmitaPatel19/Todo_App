@@ -93,3 +93,19 @@ lib/
 │   ├── task_item.dart                # Widget for displaying individual tasks
 │   └── task_statistic_card.dart     # Widget to show task statistics
 └── main.dart                         # App entry point
+
+---
+
+## 🤝 Contributing  
+
+Got an idea? Found a bug? Feel free to **contribute**! Fork this repo, make your changes, and submit a pull request. Contributions are always welcome. 🙌  
+
+---
+
+## 🎉 Acknowledgements  
+
+A huge shoutout to the **Flutter** team for making such awesome tools! 🚀  
+
+If you like this project, don’t forget to **⭐ Star** the repo! 😊  
+
+---
